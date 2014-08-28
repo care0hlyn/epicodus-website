@@ -1,0 +1,9 @@
+<h1>Epicodus Table of Contacts:</h1>
+
+<ul>
+  <% Section.all.each do |section| %>
+    <li><%= section.name %></li>
+  <% end %>
+</ul>
+
+<p><a href="sections/new">Click here to add a new section</a></p>
