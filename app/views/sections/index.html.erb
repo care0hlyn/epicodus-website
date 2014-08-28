@@ -2,7 +2,7 @@
 
 <ul>
   <% Section.all.each do |section| %>
-    <li><%= section.name %> | <a href="sections/<%= section.id %>/edit">Edit</a></li>
+    <li><%= section.name %> | <a href="sections/<%= section.id %>/edit">Edit</a> | <a href="sections/<%= section.id %>" data-confirm="You sure?" data-method="delete" rel="nofollow">Delete</a></p>
   <% end %>
 </ul>
 
