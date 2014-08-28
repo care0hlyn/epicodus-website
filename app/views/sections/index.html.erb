@@ -1,8 +1,9 @@
-<h1>Epicodus Table of Contacts:</h1>
+<h1>Epicodus Table of Contents:</h1>
 
 <ul>
   <% Section.all.each do |section| %>
-    <li><%= section.name %> | <a href="sections/<%= section.id %>/edit">Edit</a> | <a href="sections/<%= section.id %>" data-confirm="You sure?" data-method="delete" rel="nofollow">Delete</a></p>
+    <li><a href=#put here the route for section.lessons></a> <%= section.name %> | <a href="sections/<%= section.id %>/edit">Edit</a> | <a href="sections/<%= section.id %>" data-confirm="You sure?" data-method="delete" rel="nofollow">Delete</a></p></li>
+    <li>
   <% end %>
 </ul>
 

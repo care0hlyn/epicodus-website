@@ -12,8 +12,8 @@ class SectionController < ApplicationController
 
   def create
     @section = Section.new(params[:section])
-    if @section.save
-      redirect_to("/sections/")
+    if @section.lessons.create(params[:lesson])
+      redirect_to("/sections")
     else
       render('sections/new.html.erb')
     end

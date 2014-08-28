@@ -10,9 +10,10 @@ Rails.application.routes.draw do
 
   match('sections', { :via => :get, :to => 'section#index'})
   match('sections/new', { :via => :get, :to => 'section#new'})
-  match('sections', { :via => :post, :to => 'section#create'})
+  match('sections/:section_id/lessons', { :via => :post, :to => 'section#create'})
   match('sections/:id/edit', { :via => :get, :to => 'section#edit'})
   match('sections/:id/', { :via => [:patch, :put], :to => 'section#update'})
   match('sections/:id', { :via => :delete, :to => 'section#delete'})
+
 
 end

@@ -12,7 +12,7 @@ class LessonController < ApplicationController
   def create
     @lesson = Lesson.new(params[:lesson])
     if @lesson.save
-      redirect_to("/lessons/")
+      redirect_to("/lessons")
     else
       render('lessons/new.html.erb')
     end
@@ -40,7 +40,7 @@ class LessonController < ApplicationController
   def delete
     @lesson = Lesson.find(params[:id])
     @lesson.destroy
-    redirect_to("/lessons/")
+    redirect_to("/lessons")
   end
 
 end

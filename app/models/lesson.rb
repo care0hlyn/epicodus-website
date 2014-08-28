@@ -6,14 +6,12 @@ class Lesson < ActiveRecord::Base
   belongs_to :section
 
   def next
-    next_lesson_number = self.lesson + 1
-    lesson = Lesson.find_by(:lesson => next_lesson_number)
+    lesson = Lesson.where("lesson > ?", self.lesson).first
     lesson
   end
 
   def previous
-    previous_lesson_number = self.lesson - 1
-    lesson = Lesson.find_by({:lesson => previous_lesson_number})
+    lesson = Lesson.where("lesson < ?", self.lesson).first
     lesson
   end
 

@@ -7,6 +7,12 @@
   <input id='lesson_text' name='lesson[text]' type='text'><br>
   <label for='lesson_lesson'>Lesson Number:</label>
   <input id='lesson_lesson' name='lesson[lesson]' type='text'><br>
+  <label for='lesson_section'>Section</label>
+    <select name='lesson[section_id]' id="lesson">
+      <% Section.all.each do |section| %>
+        <option value="<%= section.id %>"><%= section.name %></option>
+      <% end %>
+    </select>
   <button>Add lesson</button>
 </form>
 
