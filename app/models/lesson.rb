@@ -3,6 +3,7 @@ class Lesson < ActiveRecord::Base
   validates :name, :presence => true
   validates :text, :presence => true
   validates :lesson, :numericality => true
+  belongs_to :section
 
   def next
     next_lesson_number = self.lesson + 1
