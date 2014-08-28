@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   match('sections/new', { :via => :get, :to => 'section#new'})
   match('sections', { :via => :post, :to => 'section#create'})
   match('sections/:id/edit', { :via => :get, :to => 'section#edit'})
+  match('sections/:id/', { :via => [:patch, :put], :to => 'section#update'})
 
 
 end
