@@ -12,3 +12,11 @@
       rel="nofollow">Delete</a></p>
 
 <p><a href="/lessons/">Return to lesson listing</a></p>
+
+<% if @lesson.next %>
+  <a href="/lessons/<%= @lesson.next.id %>/">Click for next lesson</a></p>
+<% end %>
+
+<% if @lesson.previous %>
+  <a href="/lessons/<%= @lesson.previous.id %>/">Click for previous lesson</a><p>
+<% end %>

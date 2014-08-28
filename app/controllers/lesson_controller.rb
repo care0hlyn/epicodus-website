@@ -41,7 +41,6 @@ class LessonController < ApplicationController
     @lesson = Lesson.find(params[:id])
     @lesson.destroy
     redirect_to("/lessons/")
-
   end
 
 end
