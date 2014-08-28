@@ -1,7 +1,13 @@
 <h1>Please enter your new lesson name:</h1>
 
-<form action='lessons' type='text' method='post'>
-<label for='lesson_name'>Lesson Name</label>
-<input id='lesson_name' name='lesson[name]' type='text'>
-<button>Add lesson</button>
+<form action='/lessons' type='text' method='post'>
+  <label for='lesson_name'>Lesson Name:</label>
+  <input id='lesson_name' name='lesson[name]' type='text'><br>
+  <label for='lesson_text'>Text:</label>
+  <input id='lesson_text' name='lesson[text]' type='text'><br>
+  <label for='lesson_lesson'>Lesson Number:</label>
+  <input id='lesson_lesson' name='lesson[lesson]' type='text'><br>
+  <button>Add lesson</button>
 </form>
+
+

@@ -1,8 +1,10 @@
 <h1>Epicodus: Learn How to Program</h1>
 
 <ul>
-  <li><% @lessons.each do | lesson| %>
-      <%= lesson.name %>
-  </li>
+  <% @lessons.each do |lesson| %>
+  <li><a href="/lessons/<%= lesson.id %>/show"><%= lesson.name %></a></li>
   <% end %>
 </ul>
+
+
+<a href="lessons/new">Create New Lesson</a>

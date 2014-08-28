@@ -1,0 +1,14 @@
+<h1><%= @lesson.name %>:</h1>
+
+<p>TEXT:<br><%= @lesson.text %><br>
+  LESSON NUM:<br><%= @lesson.lesson %>
+</p>
+
+<p><a href="/lessons/<%= @lesson.id %>/edit">Click here to edit this lesson</a></p>
+
+<p><a href="/lessons/<%= @lesson.id %>"
+      data-confirm="You sure?"
+      data-method="delete"
+      rel="nofollow">Delete</a></p>
+
+<p><a href="/lessons/">Return to lesson listing</a></p>

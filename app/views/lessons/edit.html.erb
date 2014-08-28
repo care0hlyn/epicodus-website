@@ -1,0 +1,13 @@
+<h1>Please re-enter the information you need to edit:</h1>
+
+<form action='/lessons/<%= @lesson.id %>' type='text' method='post'>
+  <input name="_method" type="hidden" value="patch">
+  <label for='lesson_name'>Lesson Name:</label>
+  <input id='lesson_name' name='lesson[name]' type='text' value="<%= @lesson.name %>"><br>
+  <label for='lesson_text'>Text:</label>
+  <input id='lesson_text' name='lesson[text]' type='text' value="<%= @lesson.text %>"><br>
+  <label for='lesson_lesson'>Lesson Number:</label>
+  <input id='lesson_lesson' name='lesson[lesson]' type='text' value="<%= @lesson.lesson %>"><br>
+  <button>Add lesson</button>
+</form>
+
