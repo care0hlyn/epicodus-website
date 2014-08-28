@@ -2,7 +2,7 @@
 
 <ul>
   <% Section.all.each do |section| %>
-    <li><%= section.name %></li>
+    <li><%= section.name %> | <a href="sections/<%= section.id %>/edit">Edit</a></li>
   <% end %>
 </ul>
 
