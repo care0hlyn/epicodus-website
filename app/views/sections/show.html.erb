@@ -1,0 +1,8 @@
+<h1>Lessons for <%= @section.name %>:</h1>
+
+<ul><% @lessons.sort_by_lesson.each do |lesson| %>
+  <li><%= lesson.lesson %> | <%= lesson.name %></li>
+  <% end %>
+</ul>
+
+<p><a href="/sections">Table of Contents</a></p>

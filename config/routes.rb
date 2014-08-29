@@ -14,6 +14,5 @@ Rails.application.routes.draw do
   match('sections/:id/edit', { :via => :get, :to => 'section#edit'})
   match('sections/:id/', { :via => [:patch, :put], :to => 'section#update'})
   match('sections/:id', { :via => :delete, :to => 'section#delete'})
-
-
+  match('sections/:section_id/lessons', { :via => :get, :to => 'section#show'})
 end

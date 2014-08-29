@@ -2,6 +2,7 @@ class SectionController < ApplicationController
 
   def index
     @section = Section.all
+    # @section_id = params[:section_id]
     render('sections/index.html.erb')
   end
 
@@ -39,5 +40,10 @@ class SectionController < ApplicationController
     redirect_to("/sections")
   end
 
+  def show
+    @section = Section.find(params[:section_id])
+    @lessons = @section.lessons
+    render('sections/show.html.erb')
+  end
 
 end
