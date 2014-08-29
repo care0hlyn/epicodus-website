@@ -12,7 +12,7 @@ class SectionController < ApplicationController
   end
 
   def create
-    @section = Section.new(params[:section])
+    @section = Section.create(params[:section])
     if @section.lessons.create(params[:lesson])
       redirect_to("/sections")
     else

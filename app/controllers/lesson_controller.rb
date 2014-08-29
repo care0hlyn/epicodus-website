@@ -12,6 +12,7 @@ class LessonController < ApplicationController
   def create
     @lesson = Lesson.new(params[:lesson])
     if @lesson.save
+      flash[:notice] = "Your lesson was added."
       redirect_to("/lessons")
     else
       render('lessons/new.html.erb')
